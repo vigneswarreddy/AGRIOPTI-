@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Gideon+Roman&family=Habibi&family=Italianno&family=Just+Another+Hand&family=Space+Grotesk:wght@300..700&display=swap');
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+}
+
+@keyframes backgroundAnimation {
+  0%{
+    background-image: url('./assets/green-bg1.png');
+  }
+  25% {
+    background-image: url('./assets/green-bg1.png');
+  }
+  50% {
+    background-image: url('./assets/green-bg2.png');
+  }
+  75% {
+    background-image: url('./assets/green-bg3.png');
+  }
+  100% {
+    background-image: url('./assets/green-bg4.png');
+  }
+}
+
+.animation-backgroundAnimation {
+  animation: backgroundAnimation 5s ease-in-out forwards ;
+}
+
+.animation-backgroundAnimation2 {
+  animation: backgroundAnimation 20s ease-in-out forwards infinite;
+}
+
+@keyframes SunAnimation {
+  0%{
+    background-image: url('./assets/sun1.png');
+    right:0;
+    top:0;
+    height:full;
+    width:full;
+    object:cover;
+  
+  }
+  25% {
+    background-image: url('./assets/sun2.png');
+    right:0;
+    top:0;
+    height:full;
+    width:full;
+    object:contain;
+   
+  }
+  50% {
+    background-image: url('./assets/sun3.png');
+  }
+  75% {
+    background-image: url('./assets/sun4.png');
+  }
+  100% {
+    background-image: url('./assets/sun5.png');
+  }
+}
+
+.animation-sunAnimation {
+  animation: SunAnimation 5s ease-in-out forwards;
+}
+
+
+
+
+
+/* Chat.css */
+
+
+/* Add animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+
+@keyframes butterflyAnimation {
+  0%{
+    left:0;
+    bottom:10%;
+    opacity:0;
+  }
+  25% {
+    left:0;
+    top:50%;
+    opacity:1;
+    
+  }
+  50% {
+    left:50%;
+    top:35%;
+    opacity:1;
+    
+  }
+
+  100% {
+    right:0;
+    top:0;
+    opacity:0;
+    
+  }
+}
+@keyframes butterflyAnimation2 {
+  0%{
+    left:0;
+    bottom:10%;
+    opacity:0;
+  }
+  25% {
+    left:0;
+    top:70%;
+    opacity:1;
+    
+  }
+  50% {
+    left:50%;
+    top:35%;
+    opacity:1;
+    
+  }
+
+  100% {
+    right:0;
+    top:0;
+    opacity:0;
+    
+  }
+}
+
+.animate-butter {
+  animation:butterflyAnimation  3s ease-in-out infinite;
+}
+.animate-butter2 {
+  animation:butterflyAnimation2  4s ease-in-out infinite;
+}
+
+
+.flip-vertical {
+  transform: scaleX(-1);
+}
+
+
+

@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nature-50: #f0f7f4;
+  --nature-100: #d1e7dd;
+  --nature-200: #a3cfbb;
+  --nature-300: #75b798;
+  --nature-400: #479f76;
+  --nature-500: #198754;
+  --nature-600: #146c43;
+  --nature-700: #0f5132;
+  --nature-800: #0a3622;
+  --nature-950: #051b11;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  body {
+    @apply bg-nature-50 text-nature-950 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/40;
+  }
+
+  .glass-dark {
+    @apply bg-nature-950/40 backdrop-blur-xl border border-white/10;
+  }
+
+  .btn-primary {
+    @apply bg-nature-950 text-nature-400 font-black uppercase tracking-[0.2em] px-8 py-3 rounded-2xl hover:bg-nature-600 hover:text-white transition-all duration-500 shadow-lg hover:shadow-nature-600/30;
+  }
+
+  .input-field {
+    @apply w-full bg-white/50 border-2 border-nature-100 rounded-2xl px-4 py-3 md:px-6 md:py-4 focus:outline-none focus:border-nature-600 focus:bg-white transition-all duration-300 font-medium text-base;
+  }
+
+  .bg-mesh {
+    background-color: #051b11;
+    background-image:
+      radial-gradient(at 0% 0%, hsla(158, 64%, 22%, 1) 0, transparent 50%),
+      radial-gradient(at 50% 0%, hsla(150, 40%, 15%, 1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(142, 50%, 10%, 1) 0, transparent 50%);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-nature-200 rounded-full hover:bg-nature-400 transition-colors;
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  @keyframes pulse-slow {
+
+    0%,
+    100% {
+      opacity: 0.4;
+    }
+
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes progress-shrink {
+    from {
+      width: 100%;
+    }
+
+    to {
+      width: 0%;
+    }
+  }
+
+  .animate-progress-shrink {
+    animation: progress-shrink 3s linear forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px) scale(0.97);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

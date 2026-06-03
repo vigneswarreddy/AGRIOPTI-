@@ -1,0 +1,15 @@
+Sending request to http://127.0.0.1:5001/predict-crop-farmer...
+Status: 200
+Response:
+{
+  "estimated_npk": {
+    "K": 50,
+    "N": 30,
+    "P": 30,
+    "humidity": 50,
+    "ph": 6.5,
+    "rainfall": 200,
+    "temperature": 22
+  },
+  "recommended_crop": "Pomegranate"
+}

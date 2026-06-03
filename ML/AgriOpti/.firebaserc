@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "agriopti-b67b6"
+  },
+  "targets": {
+    "agriopti-b67b6": {
+      "hosting": {
+        "main": [
+          "agriopti-b67b6"
+        ],
+        "agriopt": [
+          "agriopt"
+        ],
+        "agriopti": [
+          "agriopti"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
